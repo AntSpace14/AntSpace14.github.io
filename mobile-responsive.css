@@ -1,0 +1,690 @@
+/* ===== MOBILE RESPONSIVE ENHANCEMENTS ===== */
+
+/* Smooth scrolling for all devices */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Base mobile optimizations */
+@media (max-width: 768px) {
+    
+    /* Typography adjustments */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    /* Container padding */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Navbar mobile */
+    .navbar {
+        padding: 0.8rem 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links {
+        padding: 1.5rem 0;
+        gap: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(42, 157, 143, 0.1);
+    }
+    
+    /* Hero section mobile */
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Section titles */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* About section mobile */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .about-image img {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .about-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .about-info {
+        margin-top: 1.5rem;
+    }
+    
+    .info-item {
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    /* Journey timeline mobile */
+    .compact-timeline {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0.5rem;
+    }
+    
+    .timeline-track {
+        display: none;
+    }
+    
+    .journey-node {
+        width: 100%;
+    }
+    
+    .node-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .node-circle i {
+        font-size: 1.5rem;
+    }
+    
+    .node-year {
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+    
+    .node-popup {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        transform: none !important;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .node-popup::before,
+    .node-popup::after {
+        display: none;
+    }
+    
+    /* Technical skills mobile */
+    .tech-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .tech-skill-card {
+        padding: 1rem;
+    }
+    
+    .tech-icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .tech-skill-card h4 {
+        font-size: 0.9rem;
+    }
+    
+    .tech-skill-card p {
+        font-size: 0.75rem;
+    }
+    
+    /* Projects mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .project-image img {
+        height: 200px;
+    }
+    
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project-content p {
+        font-size: 0.9rem;
+    }
+    
+    .project-tags {
+        gap: 0.4rem;
+    }
+    
+    .project-tags span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+    
+    /* Contact section mobile */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info {
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .contact-item i {
+        font-size: 1.3rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Social links mobile */
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    /* Theme toggle mobile */
+    /*
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+        top: 70px;
+        right: 20px;
+    }
+    
+    .theme-toggle i {
+        font-size: 1.1rem;
+    }
+    
+    /* AI Chat mobile */
+    .ai-chat-widget {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .ai-chat-toggle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+    
+    .ai-notification-badge {
+        bottom: 90px;
+        right: 20px;
+        font-size: 0.8rem;
+        padding: 0.5rem 0.9rem;
+        transform: translateX(0);
+    }
+    
+    .ai-chat-container {
+        width: calc(100vw - 20px);
+        height: calc(100vh - 100px);
+        bottom: 90px;
+        right: 10px;
+        border-radius: 15px;
+    }
+    
+    .ai-chat-header {
+        padding: 1rem;
+    }
+    
+    .ai-avatar-header {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .ai-header-content h4 {
+        font-size: 1rem;
+    }
+    
+    .ai-status {
+        font-size: 0.75rem;
+    }
+    
+    .ai-topics-bar {
+        padding: 0.8rem;
+        gap: 0.4rem;
+    }
+    
+    .ai-topic-chip {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .ai-chat-messages {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .ai-welcome-card {
+        padding: 1.5rem;
+    }
+    
+    .ai-welcome-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .ai-welcome-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .ai-welcome-card p {
+        font-size: 0.9rem;
+    }
+    
+    .ai-capability-item {
+        font-size: 0.85rem;
+    }
+    
+    .ai-quick-btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .ai-message-content {
+        max-width: 85%;
+    }
+    
+    .ai-message-content p {
+        font-size: 0.9rem;
+        padding: 0.8rem 1rem;
+    }
+    
+    .ai-chat-input {
+        padding: 1rem;
+        gap: 0.6rem;
+    }
+    
+    .ai-chat-input input {
+        font-size: 16px; /* Prevents zoom */
+        padding: 0.8rem 1rem;
+    }
+    
+    #aiSendBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    /* Footer mobile */
+    .footer {
+        padding: 1.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+    
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .about-text h3 {
+        font-size: 1.4rem;
+    }
+    
+    .tech-skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ai-chat-container {
+        width: calc(100vw - 10px);
+        height: calc(100vh - 80px);
+        right: 5px;
+    }
+}
+
+/* Landscape mode on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    
+    .hero {
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .ai-chat-container {
+        height: calc(100vh - 60px);
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    
+    /* Larger touch targets */
+    .btn,
+    .project-link,
+    .social-links a,
+    .nav-links a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .project-card:hover,
+    .skill-category:hover,
+    .tech-skill-card:hover {
+        transform: none;
+    }
+    
+    /* Add active states instead */
+    .project-card:active,
+    .skill-category:active,
+    .tech-skill-card:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+    
+    .btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Smooth animations for mobile */
+@media (max-width: 768px) {
+    
+    * {
+        -webkit-tap-highlight-color: rgba(102, 126, 234, 0.2);
+    }
+    
+    .project-card,
+    .skill-category,
+    .tech-skill-card,
+    .journey-node {
+        transition: all 0.3s ease;
+    }
+    
+    /* Reduce animation complexity on mobile for performance */
+    .floating-shape,
+    .particle,
+    .tech-bg-animation {
+        display: none;
+    }
+}
+
+/* Accessibility improvements for mobile */
+@media (max-width: 768px) {
+    
+    /* Ensure text is readable */
+    body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Improve contrast */
+    .text-light {
+        color: #4a6a72;
+    }
+    
+    /* Better spacing for readability */
+    p {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure buttons are easily tappable */
+    button,
+    .btn,
+    a {
+        touch-action: manipulation;
+    }
+}
+
+/* Loading optimization for mobile */
+@media (max-width: 768px) {
+    
+    /* Lazy load images */
+    img {
+        loading: lazy;
+    }
+    
+    /* Optimize animations */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+
+/* ===== MOBILE TOUCH EFFECTS (Replaces Cursor) ===== */
+
+/* Touch ripple effect for mobile */
+@media (max-width: 768px) {
+    
+    .touch-ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(102, 126, 234, 0.5);
+        transform: scale(0);
+        animation: ripple-effect 0.6s ease-out;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple-effect {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+    
+    /* Touch feedback for buttons */
+    .btn,
+    button,
+    .project-card,
+    .skill-category,
+    .tech-skill-card,
+    .ai-quick-btn,
+    .ai-topic-chip {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Active state glow */
+    .btn:active,
+    button:active {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+    }
+    
+    .project-card:active {
+        box-shadow: 0 10px 30px rgba(42, 157, 143, 0.3);
+        transform: scale(0.98);
+    }
+    
+    /* Touch highlight effect */
+    * {
+        -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+    }
+    
+    /* Smooth touch interactions */
+    a, button, .btn, .project-card, .skill-category {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: all 0.2s ease;
+    }
+    
+    /* Vibrant active states */
+    .nav-links a:active {
+        color: var(--primary-color);
+        background: rgba(42, 157, 143, 0.1);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+    
+    .social-links a:active {
+        transform: scale(0.9);
+        box-shadow: 0 2px 10px rgba(42, 157, 143, 0.5);
+    }
+    
+    /* Card press effect */
+    .tech-skill-card:active {
+        transform: scale(0.95);
+        box-shadow: 0 5px 20px rgba(42, 157, 143, 0.3);
+    }
+    
+    /* Button press effect */
+    .btn-primary:active {
+        transform: scale(0.95);
+        box-shadow: 0 4px 15px rgba(231, 111, 81, 0.5);
+    }
+    
+    .btn-secondary:active {
+        transform: scale(0.95);
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Journey node touch effect */
+    .journey-node:active .node-circle {
+        transform: scale(1.1);
+        box-shadow: 0 8px 25px rgba(231, 111, 81, 0.6);
+    }
+    
+    /* Theme toggle touch effect */
+    .theme-toggle:active {
+        transform: scale(0.9) rotate(20deg);
+    }
+    
+    /* AI chat toggle touch effect */
+    .ai-chat-toggle:active {
+        transform: scale(0.9) rotate(20deg);
+    }
+    
+    /* Project overlay on tap */
+    .project-card:active .project-overlay {
+        opacity: 0.9;
+    }
+    
+    /* Skill tag touch effect */
+    .skill-tag:active {
+        transform: scale(0.95);
+        box-shadow: 0 2px 8px rgba(42, 157, 143, 0.4);
+    }
+}
+
+/* Haptic-like visual feedback */
+@media (max-width: 768px) {
+    
+    /* Pulse effect on tap */
+    @keyframes tap-pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+        }
+        100% {
+            box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+        }
+    }
+    
+    /* Add pulse to important buttons when tapped */
+    .btn-primary:active::after,
+    .ai-send-btn:active::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        animation: tap-pulse 0.5s ease-out;
+        pointer-events: none;
+    }
+}

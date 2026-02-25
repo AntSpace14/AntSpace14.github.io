@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    
+    <!-- iOS Compatibility -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Antariksh Sarmah Portfolio">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232a9d8f' width='100' height='100'/><text y='75' font-size='70' fill='white' font-family='Arial' text-anchor='middle' x='50'>KD</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%232a9d8f' width='100' height='100'/><text y='75' font-size='70' fill='white' font-family='Arial' text-anchor='middle' x='50'>AS</text></svg>">
+    
+    <meta name="theme-color" content="#2a9d8f">
+    <meta name="msapplication-navbutton-color" content="#2a9d8f">
+    
+    <title>Antariksh Sarmah - Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-lightbox.css">
+    <link rel="stylesheet" href="ios-compatibility.css">
+    <link rel="stylesheet" href="mobile-responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Welcome to my Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#technical-skills">Technical Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cosmic Stars Background (Dark Mode Only) -->
+    <canvas id="starsCanvas" class="stars-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <div class="custom-font"><span class="highlight">Antariksh Sarmah</span></div></h1>
+                <h2 class="typing-text">Data Analyst</h2>
+                <p>Transforming data into actionable insights</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary ripple-btn">View Projects</a>
+                    <a href="https://drive.google.com/file/d/1kwGJe2Jdz9eRPI7uhi7VbdZ9PtHUtH-M/view?usp=sharing" target="_blank" class="btn btn-secondary ripple-btn"><i class="fa-regular fa-file"></i> Resume</a>
+                </div>
+            </div>
+
+<!--             
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/portrait.jpeg" alt="Antariksh Sarmah - Data Analyst">
+                </div>
+                <div class="about-text">
+                    <h3>Entry-Level Data Analyst</h3>
+                    <p>I work with the modern data stack—Snowflake, SQL, Python, and Alteryx—to build reliable ETL workflows, automate time-consuming processes, and create insightful Power BI dashboards that highlight meaningful trends. I'm also exploring AWS and cloud platforms to understand how they contribute to scalable data ecosystems.</p>
+                    <p>Currently, I'm seeking roles in Data Analysis where I can connect raw data with actionable business decisions. In the long run, I aim to transition into Data Engineering and dive deeper into big data and cloud architecture—because understanding how data flows and scales helps me work with it more effectively.</p> 
+                    <p>For me, data isn't just about running scripts or building dashboards; it's about understanding business needs, uncovering valuable insights, and ensuring data truly supports smarter, impactful decision-making.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spacer4nger05@gmail.com">spacer4nger05@gmail.com</a>
+
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Assam, India</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Vellore Institute of Technology, Bhopal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline Section -->
+    <section id="journey" class="journey-timeline">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <p class="timeline-subtitle">Hover over the years to explore my milestones</p>
+            
+            <div class="compact-timeline">
+                <div class="timeline-track"></div>
+                
+                <div class="journey-node" data-year="2016-2022">
+                    <div class="node-circle">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <span class="node-year">2016-2022</span>
+                    <div class="node-popup">
+                        <h3>High School Education</h3>
+                        <p>Completed schooling in Guwahati from MVM-IV, followed by SAI RNS Academy. Leaned towards analytical thinking and science led curiosity, often participating in science exhibitions.</p>
+                        <div class="popup-tags">
+                            <span>Mathematics</span>
+                            <span>Science</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-node" data-year="2022-2026">
+                    <div class="node-circle">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span class="node-year">2022-2026</span>
+                    <div class="node-popup">
+                        <h3>Bachelor's Degree - CSE (Cyber Security & Digital Forensics)</h3>
+                        <p>Pursuing Computer Science Engineering with specialization in Cyber Security & Digital Forensics at Vellore Institute of Technology, Bhopal.</p>
+                        <div class="popup-tags">
+                            <span>Computer Networks</span>
+                            <span>DBMS</span>
+                            <span>Secure Practices</span>
+                            <span>Cryptography</span>
+                            <span>Python</span>
+                            <span>Operating System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-node current" data-year="Aug 2025-Jan 2026">
+                    <div class="node-circle">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <span class="node-year">Aug 2025-Jan 2026</span>
+                    <div class="node-popup">
+                        <h3>Junior Data Analyst - ALA PVT LTD</h3>
+                        <p>Worked as a Junior Data Analyst, building ETL workflows and creating impactful dashboards.</p>
+                        <ul style="text-align: left; margin-top: 1rem; line-height: 1.8;">
+                            <li>Performed ETL & automation workflows using SQL, Snowflake, Python & Alteryx</li>
+                            <li>Designed dashboards using Power BI to improve data visibility</li>
+                            <li>Cleaned, transformed, and validated 50K+ records across systems</li>
+                            <li>Utilized Cortex AI for advanced data insights and predictive analytics</li>
+                            <li>Contributed in developing Alteryx ETL workflows, transforming raw ATP tennis
+datasets into structured player-match models.</li>
+                        </ul>
+                        <div class="popup-tags">
+                            <span>SQL</span>
+                            <span>Python</span>
+                            <span>Snowflake</span>
+                            <span>Alteryx</span>
+                            <span>Power BI</span>
+                            <span>ETL</span>
+                            <span>Automation</span>
+                            <span>Cortex AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="technical-skills" class="technical-skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="tech-subtitle">Tools & Technologies I Work With</p>
+            
+            <div class="tech-skills-grid">
+                <div class="tech-skill-card" data-skill="power-bi">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" alt="Power BI" class="tech-icon" onerror="this.src='https://img.icons8.com/color/96/power-bi.png'">
+                    </div>
+                    <h4>Power BI</h4>
+                    <p>Data Visualization</p>
+                </div>
+
+                <div class="tech-skill-card" data-skill="mysql">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" class="tech-icon" onerror="this.src='https://img.icons8.com/color/96/mysql-logo.png'">
+                    </div>
+                    <h4>MySQL</h4>
+                    <p>Database Management</p>
+                </div>
+
+                <div class="tech-skill-card" data-skill="snowflake">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://companieslogo.com/img/orig/SNOW-35164165.png" alt="Snowflake" class="tech-icon">
+                    </div>
+                    <h4>Snowflake</h4>
+                    <p>Cloud Data Platform</p>
+                </div>
+
+                <div class="tech-skill-card" data-skill="python">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon" onerror="this.src='https://img.icons8.com/color/96/python.png'">
+                    </div>
+                    <h4>Python</h4>
+                    <p>Programming & Analysis</p>
+                </div>
+
+                <div class="tech-skill-card" data-skill="Alteryx">
+                    <div class="tech-icon-wrapper">
+                        <img src="alteryx.png" alt="Alteryx" class="tech-icon">
+                    </div>
+                    <h4>Alteryx</h4>
+                    <p>Data Preparation</p>
+                </div>
+
+                
+            
+                <!-- <div class="tech-skill-card" data-skill="alteryx">
+                    <div class="tech-icon-wrapper">
+                        <svg class="tech-icon" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="alteryxBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#00B8D4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>        -->
+
+                        <!--                          
+                            <rect x="50" y="60" width="14" height="80" fill="url(#alteryxBlue)" rx="3"/>
+                            <polygon points="78,60 78,140 148,100" fill="white"/>
+                            <path d="M 75 57 L 151 100 L 75 143" stroke="url(#alteryxBlue)" stroke-width="16" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+                            <rect x="30" y="155" width="40" height="40" fill="white" rx="4" stroke="url(#alteryxBlue)" stroke-width="2"/>
+                            <polyline points="38,183 58,163 58,183 38,163" stroke="url(#alteryxBlue)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h4>Alteryx</h4>
+                    <p>Data Preparation</p>
+                </div> -->
+
+
+                <div class="tech-skill-card" data-skill="excel">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="Excel" class="tech-icon" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg'">
+                    </div>
+                    <h4>Excel</h4>
+                    <p>Spreadsheet Analysis</p>
+                </div>
+
+
+                <div class="tech-skill-card" data-skill="github">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon" onerror="this.src='https://img.icons8.com/fluency/96/github.png'">
+                    </div>
+                    <h4>GitHub</h4>
+                    <p>Version Control</p>
+                </div>
+
+                <div class="tech-skill-card" data-skill="vscode">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon" onerror="this.src='https://img.icons8.com/color/96/visual-studio-code-2019.png'">
+                    </div>
+                    <h4>VS Code</h4>
+                    <p>Code Editor</p>
+                </div>
+
+                <div class="tech-skill-card" data-skill="aws">
+                    <div class="tech-icon-wrapper">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tech-icon" onerror="this.src='https://img.icons8.com/color/96/amazon-web-services.png'">
+                    </div>
+                    <h4>AWS</h4>
+                    <p>Cloud Computing</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="tech-bg-animation">
+            <div class="tech-circle tech-circle-1"></div>
+            <div class="tech-circle tech-circle-2"></div>
+            <div class="tech-circle tech-circle-3"></div>
+            <div class="tech-wave tech-wave-1"></div>
+            <div class="tech-wave tech-wave-2"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects"></section>
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <!-- screenshot sits behind content (hidden by default) -->
+                    <img class="project-screenshot" id="img-call" src="/Call_Transcript_Sentiment_Analyzer.png" alt="Call Transcript Sentiment Analyzer">
+                    
+                    <div class="project-content">
+                        <h3>Call Transcript Sentiment Analyzer</h3>
+                        <p>A Snowflake-native, zero-ETL pipeline that uses GenAI to process call transcripts and surface real-time sentiment and issue summaries.</p>
+                        <div class="project-tags">
+                            <span>Snowpark (Py)</span>
+                            <span>Streamlit</span>
+                            <span>Cortex AI</span>
+                            <span>Snowflake</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AntSpace14/DA-Call_Transcript_Sentiment_Analyzer" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                            <!-- new button -->
+                            <button class="project-link view-image" aria-expanded="false" aria-controls="img-call" type="button">
+                            <i class="far fa-image"></i> View Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <!-- screenshot sits behind content (hidden by default) -->
+                    <img class="project-screenshot" id="img-foodapp" src="/Food Delivery App.png" alt="Food Delivery App">
+
+                    <div class="project-content">
+                        <h3>Food Delivery App</h3>
+                        <p>A full-stack, Snowflake-adjacent analytics system leveraging real-time operational data and GenAI to surface executive-level insights on platform and restaurant performance.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>Cortex Ai</span>
+                            <span>Snowflake</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AntSpace14/DA-Food_Delivery_App_Repo" target="_blank" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                            <!-- new button -->
+                            <button class="project-link view-image" aria-expanded="false" aria-controls="img-food" type="button">
+                            <i class="far fa-image"></i> View Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <!-- screenshot sits behind content (hidden by default) -->
+                    <div class="project-screenshots">
+                        <img class="project-screenshot" id="img-Czech" src="/Czechoslovakia-Banking-Financial-Data-Analysis.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Modeling.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Transactions.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Loans.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Demographic.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Cards.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Accounts.png" alt="Czechoslovakia Banking Financial Data Analysis Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Conclusion-I.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-Czech" src="/Czech-Conclusion-II.png" alt="Tennis Intelligence Dashboard">
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Czechoslovakia Banking Financial Data Analysis</h3>
+                        <p>Comprehensive 5-year financial analysis of Czechoslovakia Bank data covering 8 tables, namely Account, Card, Client, Disposition, District, Loan, Order, and Transaction to deliver actionable insights for informed financial decision-making.</p>
+                        <div class="project-tags">
+                            <span>AWS S3</span>
+                            <span>Snowflake</span>
+                            <span>SQL</span>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AntSpace14/DA-Czechoslovakia_Banking_Finance_Data_Analysis" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                            <!-- new button -->
+                            <button class="project-link view-image" aria-expanded="false" aria-controls="img-bank" type="button">
+                            <i class="far fa-image"></i> View Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <!-- screenshot sits behind content (hidden by default) -->
+                    <img class="project-screenshot" id="img-serverless" src="/Serverless ETL Pipeline for Insurance Claims.jpeg" alt="Serverless">
+                    <div class="project-content">
+                        <h3>Serverless ETL Pipeline for Insurance Claims</h3>
+                        <p>Production-ready serverless ETL pipeline processing insurance claims data into analytics-ready tables for business intelligence, demonstrating enterprise-level data engineering with scalable cloud-based AWS solutions (Lambda, S3, Glue, Athena, EventBridge, IAM).</p>
+                        <div class="project-tags">
+                             <span>AWS</span>
+                            <span>boto3</span>
+                            <span>Python</span>
+                            <span>ETL</span>
+                            <span>Serverless</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AntSpace14/DA-Insurance_ETL_PIPELINE" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                            <!-- new button -->
+                            <button class="project-link view-image" aria-expanded="false" aria-controls="img-serverless" type="button">
+                            <i class="far fa-image"></i> View Image
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <!-- screenshot sits behind content (hidden by default) -->
+                    <img class="project-screenshot" id="img-weather" src="/Report image.png" alt="weather screenshot">
+
+                    <div class="project-content">
+                    <h3 class="project-title">Live Weather Monitoring Dashboard</h3>
+                    <p>An interactive live weather analytics dashboard built using Power BI and WeatherAPI.com, designed to visualize real-time weather conditions, air quality, and short-term forecasts across multiple cities.</p>
+                    <div class="project-tags">
+                    <span>Power BI</span>
+                    <span>WeatherAPI</span>
+                    <span>Data Modeling</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/AntSpace14/DA-Weather_Dashboard" class="project-link"><i class="fab fa-github"></i> View Code</a>
+
+                    <!-- new button -->
+                    <button class="project-link view-image" aria-expanded="false" aria-controls="img-weather" type="button">
+                    <i class="far fa-image"></i> View Image
+                    </button>
+                </div>
+                </div>
+                </div>
+
+
+
+                <div class="project-card" data-tilt>
+                    <!-- screenshot sits behind content (hidden by default) -->
+                    <div class="project-screenshots">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Player-Overview.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Player-Drill-Down.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Player-Drill-Down-II.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Pressure_Pressure_Analytics.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Surface-Style_Analysis.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Surface-Style_Analysis_II.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/PBI-Handedness_Matchups.png" alt="Tennis Intelligence Dashboard">
+                        <img class="project-screenshot" id="img-tennis" src="/alteryx-workflow.png" alt="Tennis Intelligence Dashboard">
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Tennis Intelligence ETL & Dashboard</h3>
+                        <p>A deep dive project using PowerBI & Alteryx (ETL) highlighting statistics of Tennis Players from 2011-2024 based on JeffSackmann's repo. This project builds an end-to-end analytical system that connects: Match performance, Surface effects, Pressure situations, Handedness and matchups, Ranking context.</p>
+                        <div class="project-tags">
+                            <span>Sports Analytics</span>
+                            <span>Power BI</span>
+                            <span>Alteryx</span>
+                            <span>Data Modeling</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AntSpace14/DA-Tennis_Intelligence_ETL_Dashboard" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                            <!-- new button -->
+                            <button class="project-link view-image" aria-expanded="false" aria-controls="img-tennis" type="button">
+                            <i class="far fa-image"></i> View Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Certification-->
+<section id="certificates" class="certificates">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-card code-style">
+                <div class="cert-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+<pre class="cert-code">
+$ Alteryx Designer Core Certification  
+---------------------------------- 
+Issuer      : Alteryx  
+Date Earned : 12.11.2025  
+Link  : <a href="https://www.credly.com/earner/earned/badge/4daf4424-d826-41e4-9881-92ad7357b7e7" target="_blank">View Certificate</a>
+</pre>
+            </div>
+
+            <div class="cert-card code-style">
+                <div class="cert-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+<pre class="cert-code">
+$ Alteryx Foundational Micro-Credential 
+---------------------------------- 
+Issuer      : Alteryx  
+Date Earned : 12.11.2025  
+Link  : <a href="https://www.credly.com/earner/earned/badge/b5b154cf-2d5b-46c4-8abf-22b45d1f99f1" target="_blank">View Certificate</a>
+</pre>
+            </div>
+
+            <div class="cert-card code-style">
+                <div class="cert-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+<pre class="cert-code">
+$ GitHub Copilot Certification Program   
+----------------------------------
+Issuer      : GitHub  
+Date Earned : 15.10.2025  
+Link  : <a href="https://learn.microsoft.com/api/credentials/share/en-us/ANTARIKSHSARMAH-6871/E714D5F7AC8D7DA2?sharingId=A9660970C4CB7212" target="_blank">View Certificate</a>
+</pre>
+            </div>
+
+            <div class="cert-card code-style">
+                <div class="cert-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+<pre class="cert-code">
+$ Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate  
+----------------------------------  
+Issuer      : Oracle  
+Date Earned : 23.08.2025  
+Link  : <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=15616F0246BFDBF1E6E23B58928F997D437C93D6D0C37BCF711BBDD5F2EA0D46" target="_blank">View Certificate</a>
+</pre>
+            </div>
+
+            <div class="cert-card code-style">
+                <div class="cert-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+<pre class="cert-code">
+$ MongoDB Certified Associate Data Modeler  
+----------------------------------
+Issuer      : MongoDB  
+Date Earned : 22.06.2025  
+Link  : <a href="https://www.credly.com/go/09L89M2P" target="_blank">View Certificate</a>
+</pre>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Connect With Me</h2>
+            <p class="contact-subtitle">Let's discuss how data can drive your business forward</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/antariksh-s-4a393a251/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AntSpace14" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=spacer4nger05@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Antariksh Sarmah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="ios-enhancements.js"></script>
+    <script src="project-lightbox.js"></script>
+
+
+ <!-- Theme Toggle Button -->
+<button id="themeToggle" class="theme-toggle">
+  <i class="fas fa-moon"></i>
+  <i class="fas fa-sun"></i>
+</button>
+</body>
+
+
+</html>

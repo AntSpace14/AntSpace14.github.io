@@ -1,0 +1,366 @@
+/* ===== iOS COMPATIBILITY STYLES ===== */
+
+/* iOS Safe Area Support */
+:root {
+    --safe-area-inset-top: env(safe-area-inset-top);
+    --safe-area-inset-right: env(safe-area-inset-right);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    --safe-area-inset-left: env(safe-area-inset-left);
+}
+
+/* Prevent iOS zoom on input focus */
+input,
+textarea,
+select {
+    font-size: 16px !important;
+}
+
+/* iOS Smooth Scrolling */
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix iOS button appearance */
+button,
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+/* iOS Touch Feedback */
+a,
+button,
+.btn,
+.ai-chat-toggle,
+.ai-quick-btn,
+.ai-topic-chip {
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.3);
+    touch-action: manipulation;
+}
+
+/* Prevent iOS text selection on buttons */
+button,
+.btn,
+.ai-chat-toggle {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* iOS Navbar with Safe Area */
+.navbar {
+    padding-top: max(1rem, var(--safe-area-inset-top));
+    padding-left: max(20px, var(--safe-area-inset-left));
+    padding-right: max(20px, var(--safe-area-inset-right));
+}
+
+
+/* iOS Theme Toggle Position */
+/*
+.theme-toggle {
+    top: max(80px, calc(80px + var(--safe-area-inset-top)));
+}
+
+
+/* iOS AI Chat Widget Position */
+.ai-chat-widget {
+    bottom: max(30px, calc(30px + var(--safe-area-inset-bottom)));
+    right: max(30px, calc(30px + var(--safe-area-inset-right)));
+}
+
+/* iOS AI Chat Container */
+.ai-chat-container {
+    max-height: calc(90vh - var(--safe-area-inset-top) - var(--safe-area-inset-bottom));
+}
+
+/* iOS Scroll Momentum */
+.ai-chat-messages,
+.ai-topics-bar {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+/* iOS Input Focus Fix */
+.ai-chat-input input:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* iOS Sticky Elements */
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+/* iOS Animation Performance */
+.ai-chat-toggle,
+.ai-message,
+.project-card,
+.skill-category {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* iOS Cursor Fallback */
+@supports (-webkit-touch-callout: none) {
+    body {
+        cursor: auto !important;
+    }
+    
+    .cursor,
+    .cursor-follower,
+    .cursor-trail-dot {
+        display: none !important;
+    }
+}
+
+/* iOS Landscape Mode */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .ai-chat-container {
+        height: 85vh;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+    }
+}
+
+/* iOS Notch Support (iPhone X and newer) */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(0px, var(--safe-area-inset-left));
+        padding-right: max(0px, var(--safe-area-inset-right));
+    }
+    
+    .footer {
+        padding-bottom: max(2rem, calc(2rem + var(--safe-area-inset-bottom)));
+    }
+}
+
+/* iOS Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+
+/* iOS Hover State Fix (prevent sticky hover) */
+@media (hover: none) and (pointer: coarse) {
+    .project-card:hover,
+    .skill-category:hover,
+    .btn:hover {
+        transform: none;
+    }
+    
+    /* Active states for touch */
+    .project-card:active {
+        transform: scale(0.98);
+    }
+    
+    .btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* iOS Safari Bottom Bar Fix */
+@supports (-webkit-touch-callout: none) {
+    .ai-chat-widget {
+        bottom: max(30px, calc(30px + 20px));
+    }
+}
+
+/* iOS Form Autofill Styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-color);
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* iOS Prevent Bounce Scroll on Fixed Elements */
+.navbar,
+.theme-toggle,
+.ai-chat-widget {
+    position: fixed;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* iOS Touch Scrolling for Modals */
+.ai-chat-messages {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* iOS Button Active State */
+button:active,
+.btn:active,
+.ai-quick-btn:active,
+.ai-topic-chip:active {
+    opacity: 0.7;
+}
+
+/* iOS Link Styling */
+a {
+    -webkit-touch-callout: default;
+}
+
+/* iOS Text Selection */
+::selection {
+    background-color: rgba(42, 157, 143, 0.3);
+    color: inherit;
+}
+
+::-moz-selection {
+    background-color: rgba(42, 157, 143, 0.3);
+    color: inherit;
+}
+
+/* iOS Momentum Scrolling for All Scrollable Elements */
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* iOS Fix for 100vh Issue */
+.hero,
+.ai-chat-container {
+    min-height: -webkit-fill-available;
+}
+
+/* iOS Prevent Zoom on Double Tap */
+* {
+    touch-action: manipulation;
+}
+
+/* iOS Smooth Font Rendering */
+body,
+button,
+input,
+textarea {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* iOS Status Bar Spacing */
+@supports (padding-top: constant(safe-area-inset-top)) {
+    body {
+        padding-top: constant(safe-area-inset-top);
+    }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+    body {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* iOS Keyboard Appearance */
+input,
+textarea {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* iOS Fix for Sticky Hover States */
+@media (hover: none) {
+    .nav-links a:hover,
+    .social-links a:hover,
+    .project-link:hover {
+        color: inherit;
+        transform: none;
+    }
+}
+
+/* iOS Performance Optimization */
+.project-card,
+.skill-category,
+.ai-message,
+.journey-node {
+    will-change: transform;
+}
+
+/* iOS Reduce Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* iOS PWA Display Mode */
+@media all and (display-mode: standalone) {
+    .navbar {
+        padding-top: max(1rem, calc(1rem + var(--safe-area-inset-top)));
+    }
+}
+
+/* iOS Landscape Orientation Fixes */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .ai-chat-container {
+        height: 80vh;
+        max-height: 80vh;
+    }
+}
+
+/* iOS Small Screen Optimizations */
+@media screen and (max-width: 375px) {
+    .ai-chat-container {
+        width: calc(100vw - 20px);
+    }
+    
+    .ai-chat-toggle {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .theme-toggle {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* iOS Accessibility - Voice Over Support */
+[aria-label],
+[role="button"] {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* iOS Fix for Input Zoom */
+@media screen and (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 16px !important;
+    }
+}
